@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20241.24.0208.0337                               -->
+<workbook original-version='18.1' source-build='2024.1.0 (20241.24.0208.0337)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='histex' inline='true' name='federated.1ifb8un0fhl0j718cw8hp0c6p2es' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='histex' name='textscan.0rzwb0u0np9lcv13trnid14xhbrd'>
+            <connection class='textscan' directory='C:/Users/91900/Desktop/DHDV/analytical' filename='histex.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0rzwb0u0np9lcv13trnid14xhbrd' name='histex.csv' table='[histex#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US'>
+            <column datatype='integer' name='age' ordinal='0' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0rzwb0u0np9lcv13trnid14xhbrd' name='histex.csv' table='[histex#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US'>
+            <column datatype='integer' name='age' ordinal='0' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[histex.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[histex.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[histex.csv_DC0F7FE313DE4B6B90963AB8696EC632]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Age (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='0' formula='[age]' peg='0' size='8.14' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='histex.csv' datatype='table' name='[__tableau_internal_object_id__].[histex.csv_DC0F7FE313DE4B6B90963AB8696EC632]' role='measure' type='quantitative' />
+      <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='histex.csv' id='histex.csv_DC0F7FE313DE4B6B90963AB8696EC632'>
+            <properties context=''>
+              <relation connection='textscan.0rzwb0u0np9lcv13trnid14xhbrd' name='histex.csv' table='[histex#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US'>
+                  <column datatype='integer' name='age' ordinal='0' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='histex' name='federated.1ifb8un0fhl0j718cw8hp0c6p2es' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ifb8un0fhl0j718cw8hp0c6p2es'>
+            <column datatype='integer' name='[Age (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='8.14' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[age]' derivation='Count' name='[cnt:age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.1ifb8un0fhl0j718cw8hp0c6p2es].[none:Age (bin):qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1ifb8un0fhl0j718cw8hp0c6p2es].[cnt:age:qk]</rows>
+        <cols>[federated.1ifb8un0fhl0j718cw8hp0c6p2es].[none:Age (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.1ifb8un0fhl0j718cw8hp0c6p2es].[Age (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{66247D0A-82E7-491A-9EA0-DEBBE51433A1}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ifb8un0fhl0j718cw8hp0c6p2es].[none:Age (bin):qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1ifb8un0fhl0j718cw8hp0c6p2es].[none:Age (bin):qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{89623C9F-5281-4085-BA25-82B267EF1DEF}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAHW0lEQVR4nO3dS28b1xmH8f+Qw5tIXS1ZsiQnUR2DjZHUQdMLkrar9iP0g2XTddFFgW6D
+      Fui6KdAATZEUceoaVp3GN0WySF1IS+Jl5pwsCm9KQhopwxGp9/mth6+OhnxmhhI4DLz3XoBR
+      ucteAHCZwvNs7L2Xc07OOQVBcOq2zjnlcqPpaxJnvzrRnrXfxm32JO7r88xOFICPe9rcfKS5
+      62u6vjAjScrn86c+JooiheG5+kpsEmc75yRpJE94HMcKgmAksydxX59ndqI9FuQKKhUCOd4t
+      4IpJFEDc76gTBSqXCqNeD5CpROeffLGier0+6rUAmeOvQDCNAGAaAcA0AoBpBADTCACmEQBM
+      IwCYRgAwjQBgGgHANAKAaQQA0wgAphEATCMAmEYAMI0AYBoBwDQCgGkEANMIAKYRAEwjAJhG
+      ADCNAGAaAcA0AoBpBADTCACmEQBMIwCYRgAwjQBgGgHANAKAaQQA0wgAphEATCMAmEYAMI0A
+      YBoBwDQCgGkEANMIAKYRAEwjAJhGADCNAGAaAcA0AoBpBADTCACmEQBMSxSAj3t6+O8v9XR7
+      b9TrATIVJtoqCFSszGpteV5xHMs5J+/9qQ9xzimKojTWOPLZm1tN3d/tpTYvDSX1tXU4Xmuq
+      Fbx+/dNbyuXSuXBI63n80ycP9Omj5oUemywA59TtHqt11NFcrSJJyufzpz4kiiKFYbLx55X2
+      7Fh5tV0htXlpiLxTszteV6ixdwrDMLUA0noeWx2np/sXO1gk+ulBWFK9Xr/QDwDG2XgdYoCM
+      EQBMIwCYRgAwjQBgGgHANAKAaQQA0wgAphEATCMAmEYAMI0AYBoBwDQCgGkEANMIAKYRAEwb
+      GsD200199tkDjeYj7cD4GBpAu7Wvf/7jC7msVwNkbGgA3W6g5eWyvvzXZtbrATI1NICFa/Mq
+      lKu6Nl/Lej1ApgYC2Hv+SH+/91Avdg+0vnrjMtYEZGbgvkDzqxt6p32i/z7bk5N0+u2vgMk2
+      EEC70VR5YUW/+v7bl7EeIFMDl0CValEf//kjffib36p/GSsCMjRwBihMzerNN29rrnmkWNJ4
+      3TETSNfQe4P+6IOf6aTTVznr1QAZG7gE8r6nP/zu9/rrX/6m8bo5N5C+gTNAEBR19907anUC
+      BZexIiBDQ/8RVpmaynodwKUYGkC1VtP24yf8FQhX3tAAXu7vqhF5VbJeDZCxoQE0D460Nl1R
+      N+vVABkbeBPcaTVVf+99Le9sq3gZKwIyNCSAA3361QP1Dttaef0mEeBKGwhgbv2WfnnjDSnI
+      8XlJXHlD/xOcO+MrUIGrgoM8TCMAmEYAMI0AYBoBwDQCgGkEANMIAKYRAEwjAJhGADCNAGAa
+      AcA0AoBpBADTCACmEQBMIwCYRgAwLVEA3ke6d+/+qNcCZG7oh+L/XxCEWlycl/dezjk55+S9
+      P/UxzjlF0eA3Dd9/1tRef7xuu9vr9pRwV5j34R8/V3zGc5+1fufit3BL9Kz7uKeXrZYOqjOa
+      n6lKkvJn3DkiiiKF4eD4OBeqlx+vr92Ig/iylzAxdo5iRWP2BdLT3+F4muwMkC/qdr1+8Z8C
+      jCneBMM0AoBpBADTCACmEQBMIwCYRgAwjQBgGgHANAKAaQQA0wgAphEATCMAmEYAMI0AYBoB
+      wDQCgGkEANMIAKYRAEwjAJhGADCNAGAaAcA0AoBpBADTCACmEQBMIwCYRgAwjQBgGgHANAKA
+      aQQA0wgAphEATCMAmEYAMI0AYBoBwDQCgGkEANMIAKYRAEwjAJhGADCNAGAaAcA0AoBpBADT
+      CACmEQBMIwCYligA7722nj9T7Ee9HCBbyQI4aainkp5v7Yx6PUCmkl0C5Utq7mypUCyNeDlA
+      tsIkG+VKM3rvh3dHvRYgc4H3PvGVvfdezrlE2zrnlMuN5j32JM5+tZuDIJio2ZO4r88zO9EZ
+      4JUgCJTP5xNvO6pfbhJnT2oAk7ivzzP7XGcA4Ko51xkgic5xW0+2GioGPak4rTdurqY2+6i1
+      r4cPv1JltqZ+X3rnTj212S8P97T5n8cq18qq1ub12tpKarO3nz/WdrOlvI9VW7iujRT3yTfP
+      vtbuYUe+29bNW3e0MFtNbfajLz5Rt7qu3sGOXr/zruYr6b1cNj//WOHchppHJ/rBW7dVzKdz
+      9jrceqKv233NFJxax5Huvv3Wqdunfv4pT01rulpWuVzR7u5uqrO9l1Y3vqdKsaxapZj67LWN
+      Dc1Wymo0GqnOLoRFlYp5Tc8tSS5KdXYYFlQq5lUuT6nRbKY2Nzo5VOPwWHv7+1pdWVK3H6c2
+      u3+8r2arq4NOpEJnT61usveVSQTliuKDXR35omaq5TO3T/0McNw+UKvd1tLiom7erKU83elw
+      b183Vq6rm+7rSN7/b/biwqzWawupz15aXpf6R6rNLac822txaUW9l/uaXUrvzBJWZvXj93+u
+      vs+r8eKFVqfTO+AUpub1kw9+oZ4L9M12Qdcq6R2Hq7Warq2+phuLMzo4PvtFwnsAmPYtmc0M
+      CqvN0OcAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
